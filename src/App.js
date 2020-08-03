@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+import Palvelut from './pages/Palvelut';
+import Toitamme from './pages/Toitamme';
+import Meista from './pages/Meista';
+import Yhteydenotto from './pages/Yhteydenotto';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/palvelut' component={Palvelut} />
+          <Route path='/toitamme' component={Toitamme} />
+          <Route path='/meista' component={Meista} />
+          <Route path='/yhteydenotto' component={Yhteydenotto} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
