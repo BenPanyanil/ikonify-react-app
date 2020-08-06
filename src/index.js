@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { ToitammeProvider } from './ContextAPI';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ToitammeProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ToitammeProvider>,
+
   document.getElementById('root')
 );
 

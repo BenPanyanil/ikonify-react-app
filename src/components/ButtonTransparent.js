@@ -18,9 +18,9 @@ export default function ButtonTransparent(props) {
 
   return (
     <Wrapper onMouseEnter={() => animateOn()} onMouseLeave={() => animateOff()}>
-      <div class={`circle ${size ? 'animate' : null}`}></div>
-      <div class='arrow-container'>
-        <FaArrowRight class={position ? 'animate' : null} />
+      <div className={`circle ${size ? 'animate' : null}`}></div>
+      <div className='arrow-container'>
+        <FaArrowRight className={position ? 'animate' : null} />
       </div>
       <p>{props.link}</p>
     </Wrapper>

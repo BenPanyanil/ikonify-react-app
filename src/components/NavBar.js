@@ -10,7 +10,7 @@ export default function NavBar() {
       <Link to='/'>
         <Logo />
       </Link>
-      <ul class='nav-links'>
+      <ul className='nav-links'>
         <Link to='/palvelut'>
           <li>Palvelut</li>
         </Link>

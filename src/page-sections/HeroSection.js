@@ -11,9 +11,9 @@ import MouseIcon from '../components/MouseIcon';
 export default function HeroSection() {
   return (
     <Wrapper>
-      <section class='hero-section'>
-        <HeroText />
-        <div class='flex-container'>
+      <section className='hero-section'>
+        <HeroText text='Lisää asiakkaita sekä räätälöityjä digitaalisia palveluita yrityksellesi.' />
+        <div className='flex-container'>
           <MouseIcon />
           <Link to='/palvelut'>
             <ButtonRed link='Palvelut' />

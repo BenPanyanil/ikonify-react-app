@@ -6,8 +6,8 @@ import HeaderText from '../components/HeaderText';
 export default function Section3_Hero() {
   return (
     <Wrapper>
-      <div class='img-container'></div>
-      <div class='text-container'>
+      <div className='img-container'></div>
+      <div className='text-container'>
         <HeaderText text='Helppoutta yrittäjyyteen.' dark={true} />
         <p>
           Olemme toteuttaneet useita projekteja sekä suomalaisille, että

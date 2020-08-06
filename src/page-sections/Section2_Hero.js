@@ -7,8 +7,12 @@ import img from '../img/section2_Hero-img.jpg';
 export default function Section2_Hero() {
   return (
     <Wrapper>
-      <img src={img} alt='ikonify about'></img>
-      <div class='text-container'>
+      <div className='img-element'>
+        <img src={img} alt='ikonify about' />
+        <div className='overlay'></div>
+      </div>
+
+      <div className='text-container'>
         <HeaderText
           text='Saat aina tarpeesi mukaiset ratkaisut ja omalle budjetille parasta vastinetta.'
           dark={false}
@@ -38,7 +42,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 620px;
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 150px;
 
   p {
     font-size: 1.1rem;
@@ -46,26 +50,39 @@ const Wrapper = styled.div`
     color: var(--main-white);
   }
 
-  img {
+  .img-element {
+    display: block;
     width: 60vw;
-    height: 550px;
-    object-fit: cover;
+    height: 580px;
     position: absolute;
     top: -60px;
     z-index: 2;
-  }
 
-  img:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: pink;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      );
+      z-index: 10;
+    }
   }
 
   .text-container {
     position: relative;
     width: 1200px;
-    min-height: 570px;
+    min-height: 590px;
     float: right;
     padding-right: 6vw;
     background: var(--main-blue);

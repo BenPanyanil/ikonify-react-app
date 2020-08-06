@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export default function MouseIcon() {
   return (
     <Wrapper>
-      <div class='mouse-shell'>
-        <div class='mouse-wheel'></div>
+      <div className='mouse-shell'>
+        <div className='mouse-wheel'></div>
       </div>
     </Wrapper>
   );

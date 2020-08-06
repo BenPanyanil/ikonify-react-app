@@ -5,7 +5,7 @@ import { MdChatBubbleOutline } from 'react-icons/md';
 export default function ChatSystem() {
   return (
     <Wrapper>
-      <div class='chatButton'>
+      <div className='chatButton'>
         <MdChatBubbleOutline />
       </div>
     </Wrapper>
