@@ -7,6 +7,7 @@ import Palvelut from './pages/Palvelut';
 import Toitamme from './pages/Toitamme';
 import Meista from './pages/Meista';
 import Yhteydenotto from './pages/Yhteydenotto';
+import Footer from './page-sections/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/meista' component={Meista} />
           <Route path='/yhteydenotto' component={Yhteydenotto} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

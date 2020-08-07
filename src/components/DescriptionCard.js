@@ -120,7 +120,7 @@ const Wrapper = styled.div`
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 76%;
+    width: 80%;
   }
 
   .button-container > div {

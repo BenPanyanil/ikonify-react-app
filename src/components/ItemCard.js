@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function ItemCard({ id, title, img }) {
+export default function ItemCard({ title, img }) {
   return (
     <Wrapper>
       <img alt='prosessi-img' src={img}></img>
-      <p className='title'>
-        <span className='id'>{id}.</span> {title}
-      </p>
+      <p className='title'>{title}</p>
 
       <div className='element'></div>
     </Wrapper>

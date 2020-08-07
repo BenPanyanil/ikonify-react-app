@@ -36,7 +36,6 @@ export default function ProsessimmeContainer() {
           {prosessimmeItems.map(item => {
             return (
               <ItemCard
-                id={prosessimmeItems.indexOf(item)}
                 key={prosessimmeItems.indexOf(item)}
                 title={item.title}
                 img={item.img}

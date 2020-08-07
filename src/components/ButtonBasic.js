@@ -18,10 +18,9 @@ export default function ButtonBasic({ text, red }) {
 const Wrapper = styled.div`
   text-align: center;
   font-weight: 500;
-
+  min-width: 80px;
   display: inline-block;
-  width: 170px;
-  padding: 12px 0;
+  padding: 12px 50px;
   border-radius: 100px;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
