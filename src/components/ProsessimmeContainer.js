@@ -1,30 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+import prosessimmeData from '../data/prosessimmeItems';
 
 import DescriptionCard from './DescriptionCard';
 import ItemCard from './ItemCard';
-import img from '../img/section2_Hero-img.jpg';
 import playIcon from '../img/play-icon.svg';
 
 export default function ProsessimmeContainer() {
+  const [prosessimmeState, setProsessimmeState] = useState(0);
+  const prosessimmeItems = prosessimmeData;
+
+  let descriptionCardValues = prosessimmeItems.find(item => {
+    return prosessimmeItems.indexOf(item) === prosessimmeState;
+  });
+
   return (
     <Wrapper>
       <div className='description-container'>
         <DescriptionCard
-          id='1'
-          title='Otsikko'
-          description='Kuvaus tekstiä tässä hyvä juttu jee. Kuvaus tekstiä tässä hyvä juttu jee.'
+          id={prosessimmeState}
+          title={descriptionCardValues.title}
+          description={descriptionCardValues.description}
+          prosessimmeState={prosessimmeState}
+          setProsessimmeState={setProsessimmeState}
+          prosessimmeItems={prosessimmeItems}
         />
       </div>
 
       <div className='item-container'>
-        <div className='item-slider' style={{ left: `-${0 * 560}px` }}>
-          <ItemCard id='1' title='Otsikko' img={img} />
-          <ItemCard id='2' title='Otsikko' img={img} />
-          <ItemCard id='3' title='Otsikko' img={img} />
-          <ItemCard id='4' title='Otsikko' img={img} />
-          <ItemCard id='5' title='Otsikko' img={img} />
-          <ItemCard id='6' title='Otsikko' img={img} />
+        <div
+          className='item-slider'
+          style={{ left: `-${prosessimmeState * 540}px` }}
+        >
+          {prosessimmeItems.map(item => {
+            return (
+              <ItemCard
+                id={prosessimmeItems.indexOf(item)}
+                key={prosessimmeItems.indexOf(item)}
+                title={item.title}
+                img={item.img}
+              />
+            );
+          })}
         </div>
         <img className='playIcon' alt='play-icon' src={playIcon}></img>
       </div>
@@ -52,6 +70,8 @@ const Wrapper = styled.div`
       position: absolute;
       display: flex;
       border-bottom: 3px solid var(--main-blue);
+      transition-duration: 500ms;
+      transition-timing-function: ease-out;
     }
 
     .playIcon {

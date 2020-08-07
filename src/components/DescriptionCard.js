@@ -1,37 +1,75 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import ButtonBasic from './ButtonBasic';
 import ButtonBasicLong from './ButtonBasicLong';
 
-export default function DescriptionCard({ id, title, description }) {
-  const [buttonState, setButtonState] = useState(0);
-
+export default function DescriptionCard({
+  id,
+  title,
+  description,
+  prosessimmeState,
+  setProsessimmeState,
+  prosessimmeItems,
+}) {
   const btnSet_1 = (
-    <>
+    <div
+      onClick={() => {
+        setProsessimmeState(1);
+      }}
+    >
       <ButtonBasicLong text='Paina nähdäksesi prosessimme!' red={true} />
-    </>
+    </div>
   );
 
   const btnSet_2 = (
-    <>
-      <ButtonBasic text='Edellinen' red={false} />
-      <ButtonBasic text='Seuraava' red={true} />
-    </>
+    <div>
+      <div
+        onClick={() => {
+          setProsessimmeState(prosessimmeState - 1);
+        }}
+      >
+        <ButtonBasic text='Edellinen' red={false} />
+      </div>
+      <div
+        onClick={() => {
+          setProsessimmeState(prosessimmeState + 1);
+        }}
+      >
+        <ButtonBasic text='Seuraava' red={true} />
+      </div>
+    </div>
   );
 
   const btnSet_3 = (
-    <>
-      <ButtonBasic text='Edellinen' red={false} />
-      <ButtonBasic text='Alkuun' red={true} />
-    </>
+    <div>
+      <div
+        onClick={() => {
+          setProsessimmeState(prosessimmeState - 1);
+        }}
+      >
+        <ButtonBasic text='Edellinen' red={false} />
+      </div>
+      <div
+        onClick={() => {
+          setProsessimmeState(0);
+        }}
+      >
+        <ButtonBasic text='Alkuun' red={true} />
+      </div>
+    </div>
   );
 
   function whichState() {
-    if (buttonState === 0) {
+    if (prosessimmeState === 0) {
       return btnSet_1;
-    } else if (buttonState >= 1) {
+    } else if (
+      prosessimmeState >= 1 &&
+      prosessimmeState < prosessimmeItems.length - 1
+    ) {
       return btnSet_2;
+    } else {
+      return btnSet_3;
     }
   }
 
@@ -83,6 +121,10 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     width: 76%;
+  }
+
+  .button-container > div {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }

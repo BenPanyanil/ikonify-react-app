@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function ItemCard({ id, title, img }) {
   return (
     <Wrapper>
-      <img alt='joo' src={img}></img>
+      <img alt='prosessi-img' src={img}></img>
       <p className='title'>
         <span className='id'>{id}.</span> {title}
       </p>
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     width: 75%;
     height: 60%;
     object-fit: cover;
-    margin-top: 12%;
+    margin-top: 10%;
     margin-left: 50%;
     transform: translateX(-50%);
   }
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     bottom: 0;
     transform: translateX(-50%);
     width: 3px;
-    height: 30px;
+    height: 25px;
     background: var(--main-dark-blue);
   }
 `;
