@@ -70,7 +70,7 @@ const Wrapper = styled.div`
       display: flex;
       border-bottom: 3px solid var(--main-blue);
       transition-duration: 500ms;
-      transition-timing-function: ease-out;
+      transition-timing-function: ease-in-out;
     }
 
     .playIcon {
