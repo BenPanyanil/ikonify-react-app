@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/ikonify-react-app/static/js/main.aea79189.chunk.js",
+    "main.js.map": "/ikonify-react-app/static/js/main.aea79189.chunk.js.map",
+    "runtime-main.js": "/ikonify-react-app/static/js/runtime-main.1491b0da.js",
+    "runtime-main.js.map": "/ikonify-react-app/static/js/runtime-main.1491b0da.js.map",
+    "static/js/2.4e1df62d.chunk.js": "/ikonify-react-app/static/js/2.4e1df62d.chunk.js",
+    "static/js/2.4e1df62d.chunk.js.map": "/ikonify-react-app/static/js/2.4e1df62d.chunk.js.map",
+    "index.html": "/ikonify-react-app/index.html",
+    "precache-manifest.74ce91cfcc511a827f98f3f2e2028c30.js": "/ikonify-react-app/precache-manifest.74ce91cfcc511a827f98f3f2e2028c30.js",
+    "service-worker.js": "/ikonify-react-app/service-worker.js",
+    "static/js/2.4e1df62d.chunk.js.LICENSE.txt": "/ikonify-react-app/static/js/2.4e1df62d.chunk.js.LICENSE.txt",
+    "static/media/footer-img.mp4": "/ikonify-react-app/static/media/footer-img.8de9fbca.mp4",
+    "static/media/ikonifyBasicWhite.svg": "/ikonify-react-app/static/media/ikonifyBasicWhite.9125c0fc.svg",
+    "static/media/ikonifyStandAlone.svg": "/ikonify-react-app/static/media/ikonifyStandAlone.3a88bf5a.svg",
+    "static/media/kx-treeshears-FrontPage.png": "/ikonify-react-app/static/media/kx-treeshears-FrontPage.1bbfa8a3.png",
+    "static/media/kx-treeshears-domainimg.svg": "/ikonify-react-app/static/media/kx-treeshears-domainimg.5c3e8275.svg",
+    "static/media/play-icon.svg": "/ikonify-react-app/static/media/play-icon.1e72cea4.svg",
+    "static/media/section2_Hero-img.jpg": "/ikonify-react-app/static/media/section2_Hero-img.786bbfe7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1491b0da.js",
+    "static/js/2.4e1df62d.chunk.js",
+    "static/js/main.aea79189.chunk.js"
+  ]
+}
