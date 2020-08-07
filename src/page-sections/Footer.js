@@ -28,10 +28,35 @@ export default function Footer() {
       </div>
       <div className='footer-container'>
         <img alt='ikonify logo' src={LogoBasic}></img>
-        <ul>
-          <li>info@ikonify.fi</li>
-          <li>045 666 6666</li>
-        </ul>
+        <div className='flex-container'>
+          <ul>
+            <h4>Yhteystiedot</h4>
+            <li>info@ikonify.fi</li>
+            <li>045 666 6666</li>
+          </ul>
+          <ul>
+            <h4>Sivukartta</h4>
+            <li>
+              <Link to='/'>Etusivu</Link>
+            </li>
+            <li>
+              <Link to='/palvelut'>Palvelumme</Link>
+            </li>
+            <li>
+              <Link to='/toitamme'>Töitämme</Link>
+            </li>
+            <li>
+              <Link to='/meista'>Meistä</Link>
+            </li>
+            <li>
+              <Link to='/yhteydenotto'>Yhteydenotto</Link>
+            </li>
+          </ul>
+          <ul>
+            <h4>Oikeudet</h4>
+            <li>&copy; Ikonify 2020</li>
+          </ul>
+        </div>
       </div>
     </Wrapper>
   );
@@ -47,7 +72,7 @@ const Wrapper = styled.div`
     position: relative;
     width: 55vw;
     margin: 0 auto;
-    transform: translateY(-20%);
+    transform: translateY(-15%);
     text-align: center;
 
     video {
@@ -80,20 +105,36 @@ const Wrapper = styled.div`
     width: 70%;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--main-white);
+    align-items: flex-start;
+    border-top: 1px solid var(--main-blue);
     padding: 30px 0;
     margin: 0 auto;
+
     img {
-      width: 120px;
+      width: 140px;
     }
 
-    ul {
+    .flex-container {
       display: flex;
-      list-style-type: none;
-      color: var(--main-white);
 
-      li {
+      a {
+        text-decoration: none;
+        color: var(--main-white);
+      }
+
+      ul {
+        list-style-type: none;
+        color: var(--main-white);
         margin-left: 40px;
+
+        h4 {
+          margin: 0 0 40px 0;
+        }
+
+        li {
+          margin: 20px 0;
+          font-size: 0.9rem;
+        }
       }
     }
   }
