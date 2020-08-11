@@ -101,4 +101,34 @@ const Wrapper = styled.div`
       float: right;
     }
   }
+
+  @media only screen and (max-width: 1440px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+
+    .text-container {
+      h2 {
+        right: 7vw;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .img-element {
+      width: 50vw;
+    }
+    .text-container {
+      h2 {
+        right: 0;
+      }
+
+      p {
+        width: 37vw;
+        margin: 100px 0;
+        float: right;
+      }
+    }
+  }
 `;

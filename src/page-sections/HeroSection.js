@@ -31,10 +31,6 @@ export default function HeroSection() {
 const Wrapper = styled.div`
   color: var(--main-white);
 
-  h2 {
-    font-size: 2.5rem;
-  }
-
   p {
     font-size: 1.1rem;
     line-height: 1.8rem;
@@ -56,5 +52,16 @@ const Wrapper = styled.div`
       justify-content: space-between;
       align-items: center;
     }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .hero-section {
+      padding: 23vh 8vw 0 8vw;
+  
+      .flex-container {
+        flex-wrap: wrap;
+        margin-top: 100px;
+        width: 300px;
+      }
   }
 `;

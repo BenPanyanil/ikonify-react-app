@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default function HeaderText({ text, dark }) {
   const textArray = text.split('');
@@ -7,16 +8,27 @@ export default function HeaderText({ text, dark }) {
   const newText = textArray.join('');
 
   return (
-    <div>
+    <Wrapper>
       <h2
         style={{
           color: dark ? 'var(--main-dark-blue)' : 'var(--main-white)',
-          fontSize: '2.5rem',
         }}
       >
         {newText}
         <span style={{ color: 'var(--main-turquoise)' }}>{lastCharacter}</span>
       </h2>
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    h2 {
+      font-size: 2.1rem;
+    }
+  }
+`;

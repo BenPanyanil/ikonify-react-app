@@ -22,4 +22,14 @@ const Wrapper = styled.div`
   font-size: 3.4rem;
   width: 70%;
   min-width: 1000px;
+
+  @media only screen and (max-width: 1440px) {
+    font-size: 2.6rem;
+    width: 70%;
+    min-width: 800px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;

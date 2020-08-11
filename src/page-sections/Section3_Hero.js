@@ -55,4 +55,27 @@ const Wrapper = styled.div`
       margin-top: 50px;
     }
   }
+
+
+  @media only screen and (max-width: 1440px) {
+    .text-container {
+      p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+
+  
+  @media only screen and (max-width: 1024px) {
+    .text-container {
+      h2 {
+        transform: translateX(0%);
+      }
+
+      p {
+        width: 34vw;
+      }
+    }
+  }
 `;

@@ -129,4 +129,27 @@ const Wrapper = styled.div`
     height: 60px;
     background: var(--main-white);
   }
+
+  @media only screen and (max-width: 1440px) {
+    .customerName {
+      font-size: 3rem;
+      line-height: 3rem;
+      width: 300px;
+    }
+
+    .link-container {
+      width: 300px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .flex-container {
+      width: 80vw;
+    }
+
+    .domainName {
+      width: 80vw;
+    }
+  }
 `;

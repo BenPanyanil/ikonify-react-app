@@ -30,12 +30,12 @@ export default function Footer() {
         <img alt='ikonify logo' src={LogoBasic}></img>
         <div className='flex-container'>
           <ul>
-            <h4>Yhteystiedot</h4>
+            <h5>Yhteystiedot</h5>
             <li>info@ikonify.fi</li>
             <li>045 666 6666</li>
           </ul>
           <ul>
-            <h4>Sivukartta</h4>
+            <h5>Sivukartta</h5>
             <li>
               <Link to='/'>Etusivu</Link>
             </li>
@@ -53,7 +53,7 @@ export default function Footer() {
             </li>
           </ul>
           <ul>
-            <h4>Oikeudet</h4>
+            <h5>Oikeudet</h5>
             <li>&copy; Ikonify 2020</li>
           </ul>
         </div>
@@ -127,8 +127,8 @@ const Wrapper = styled.div`
         color: var(--main-white);
         margin-left: 40px;
 
-        h4 {
-          margin: 0 0 40px 0;
+        h5 {
+          margin: 0 0 30px 0;
         }
 
         li {
@@ -136,6 +136,17 @@ const Wrapper = styled.div`
           font-size: 0.9rem;
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 1440px) {
+    .video-container {
+      width: 70vw;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .video-container {
+      width: 85vw;
     }
   }
 `;

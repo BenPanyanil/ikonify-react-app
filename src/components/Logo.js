@@ -41,7 +41,6 @@ const Wrapper = styled.div`
 
   #basic {
     width: 120px;
-
     transition-duration: 200ms;
   }
 
@@ -55,5 +54,18 @@ const Wrapper = styled.div`
     padding: 16px;
 
     transition-duration: 200ms;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    #standalone {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1440px) {
+    #standalone {
+      left: -75px;
+      top: -30px;
+    }
   }
 `;
