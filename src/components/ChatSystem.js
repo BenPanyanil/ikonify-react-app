@@ -35,4 +35,20 @@ const Wrapper = styled.div`
 
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
+
+  @media only screen and (max-width: 480px) {
+    bottom: 30px;
+    right: 30px;
+
+    .chatButton {
+      width: 60px;
+      height: 60px;
+
+      font-size: 30px;
+
+      cursor: pointer;
+
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
 `;

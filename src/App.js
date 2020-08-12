@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
+import MobileMenu from './components/MobileMenu';
 import HomePage from './pages/HomePage';
 import Palvelut from './pages/Palvelut';
 import Toitamme from './pages/Toitamme';
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <div className='App'>
         <NavBar />
+        <MobileMenu />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/palvelut' component={Palvelut} />

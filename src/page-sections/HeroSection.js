@@ -61,7 +61,20 @@ const Wrapper = styled.div`
       .flex-container {
         flex-wrap: wrap;
         margin-top: 100px;
-        width: 300px;
+        width: 260px;
       }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .hero-section {
+      padding: 20vh 7vw 0 7vw;
+
+      .flex-container {
+        margin-top: 60px;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `;

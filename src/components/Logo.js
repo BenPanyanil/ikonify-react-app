@@ -56,16 +56,22 @@ const Wrapper = styled.div`
     transition-duration: 200ms;
   }
 
+  @media only screen and (max-width: 1440px) {
+    #standalone {
+      left: -75px;
+      top: -30px;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
     #standalone {
       display: none;
     }
   }
 
-  @media only screen and (max-width: 1440px) {
-    #standalone {
-      left: -75px;
-      top: -30px;
+  @media only screen and (max-width: 480px) {
+    #basic {
+      width: 100px;
     }
   }
 `;

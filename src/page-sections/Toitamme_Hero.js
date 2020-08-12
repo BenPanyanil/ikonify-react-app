@@ -51,7 +51,6 @@ const Wrapper = styled.div`
     text-align: center;
     transform: translateY(-50%);
     margin-bottom: 120px;
-    cursor: pointer;
   }
 
   .flex-container {

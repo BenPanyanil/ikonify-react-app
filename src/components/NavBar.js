@@ -65,4 +65,14 @@ const Wrapper = styled.div`
   li:hover:before {
     width: 100%;
   }
+
+  @media only screen and (max-width: 800px) {
+    .nav-links {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 6vw 7vw;
+  }
 `;

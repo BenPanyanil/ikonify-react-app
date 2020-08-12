@@ -52,10 +52,6 @@ export default function Footer() {
               <Link to='/yhteydenotto'>Yhteydenotto</Link>
             </li>
           </ul>
-          <ul>
-            <h5>Oikeudet</h5>
-            <li>&copy; Ikonify 2020</li>
-          </ul>
         </div>
       </div>
     </Wrapper>
@@ -63,20 +59,21 @@ export default function Footer() {
 }
 
 const Wrapper = styled.div`
-  margin-top: 400px;
-  min-height: 600px;
+  margin-top: 200px;
   width: 100vw;
   background: var(--main-dark-blue);
 
   .video-container {
     position: relative;
-    width: 55vw;
+    width: 100vw;
+    height: 500px;
     margin: 0 auto;
-    transform: translateY(-15%);
     text-align: center;
 
     video {
+      height: 100%;
       width: 100%;
+      object-fit: cover;
       position: relative;
     }
 
@@ -91,31 +88,30 @@ const Wrapper = styled.div`
 
     .link-container {
       position: absolute;
+      width: 80%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
     .link-container > a > div {
-      margin: 8px 25px;
+      margin: 8px;
     }
   }
 
   .footer-container {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-top: 1px solid var(--main-blue);
-    padding: 30px 0;
+    width: 80%;
+    padding: 50px 0;
     margin: 0 auto;
 
     img {
-      width: 140px;
+      width: 100px;
+      margin-bottom: 40px;
     }
 
     .flex-container {
       display: flex;
+      justify-content: space-around;
 
       a {
         text-decoration: none;
@@ -125,7 +121,7 @@ const Wrapper = styled.div`
       ul {
         list-style-type: none;
         color: var(--main-white);
-        margin-left: 40px;
+        padding: 0;
 
         h5 {
           margin: 0 0 30px 0;
@@ -139,14 +135,76 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 1440px) {
-    .video-container {
-      width: 70vw;
+  @media only screen and (max-width: 800px) {
+    .footer-container {
+      
+      img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
-  @media only screen and (max-width: 800px) {
+
+  @media only screen and (min-width: 480px) {
     .video-container {
-      width: 85vw;
+      width: 85%;
+      top: -60px;
+    }
+
+    .footer-container {
+      width: 60%;
+      
+      img {
+        width: 140px;
+        margin-bottom: 20px;
+      }
+  
+      .flex-container {
+  
+        ul {
+          margin-left: 0px;
+      }
+    }
+  }
+
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 400px;
+
+    .video-container {
+      width: 64vw;
+
+      .link-container > a > div {
+        margin: 10px 20px;
+      }
+    }
+
+    .footer-container {
+      width: 64vw;
+      border-top: 1px solid var(--main-blue);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      img {
+        width: 140px;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        max-width: 280px;
+      }
+    }
+
+  @media only screen and (min-width: 1441px) {
+    .video-container {
+      width: 55vw;
+    }
+
+    .footer-container {
+      width: 55vw; 
     }
   }
 `;

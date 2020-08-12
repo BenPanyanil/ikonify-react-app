@@ -14,7 +14,7 @@ export default function Section2_Hero() {
 
       <div className='text-container'>
         <HeaderText
-          text='Saat aina tarpeesi mukaiset ratkaisut ja omalle budjetille parasta vastinetta.'
+          text='Ei pakettiratkaisuja, saat aina tarpeesi mukaisen ratkaisun.'
           dark={false}
         />
         <p>
@@ -40,92 +40,101 @@ export default function Section2_Hero() {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 620px;
-  position: relative;
-  padding-bottom: 150px;
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    color: var(--main-white);
-  }
 
   .img-element {
-    display: block;
-    width: 60vw;
-    height: 580px;
-    position: absolute;
-    top: -60px;
-    z-index: 2;
+    width: 100%;
+    height: 200px;
 
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
-
-    .overlay {
-      display: block;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0)
-      );
-      z-index: 10;
-    }
   }
 
   .text-container {
-    position: relative;
-    width: 1200px;
-    min-height: 590px;
-    float: right;
-    padding-right: 6vw;
+    padding: 0 6vw;
     background: var(--main-blue);
 
     h2 {
-      width: 600px;
-      position: absolute;
-      right: 13vw;
-      z-index: 10;
-      top: -160px;
+      padding: 40px 0;
+      margin: 0;
     }
 
     p {
-      width: 27vw;
-      margin: 100px 0;
-      float: right;
+      font-size: 1rem;
+      line-height: 1.7rem;
+      color: var(--main-white);
+      padding: 0 0 80px 0;
+      margin: 0;
     }
   }
 
-  @media only screen and (max-width: 1440px) {
-    p {
-      font-size: 1rem;
-      line-height: 1.6rem;
+  @media only screen and (min-width: 480px) {
+    .img-element {
+      height: 400px;
     }
 
     .text-container {
+      padding: 0 8vw;
+
       h2 {
-        right: 7vw;
+        padding: 60px 0 40px 0;
       }
     }
   }
 
-  @media only screen and (max-width: 1024px) {
-    .img-element {
-      width: 50vw;
+  @media only screen and (min-width: 1200px) {
+    height: 620px;
+    position: relative;
+    padding-bottom: 150px;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
     }
+
+    .img-element {
+      display: block;
+      width: 60vw;
+      height: 580px;
+      position: absolute;
+      top: -60px;
+      z-index: 2;
+
+      .overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)
+        );
+        z-index: 10;
+      }
+    }
+
     .text-container {
+      position: relative;
+      width: 1200px;
+      min-height: 590px;
+      float: right;
+      padding-right: 6vw;
+      background: var(--main-blue);
+
       h2 {
-        right: 0;
+        width: 600px;
+        position: absolute;
+        right: 13vw;
+        z-index: 10;
+        top: -160px;
       }
 
       p {
-        width: 37vw;
+        width: 27vw;
         margin: 100px 0;
         float: right;
       }

@@ -31,4 +31,10 @@ const Wrapper = styled.div`
       font-size: 2.1rem;
     }
   }
+
+  @media only screen and (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 `;
